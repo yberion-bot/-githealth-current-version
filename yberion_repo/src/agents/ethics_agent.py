@@ -1,0 +1,1 @@
+class EthicsAgent:\n    def evaluate(self, text):\n        flags = []\n        if 'always' in text.lower():\n            flags.append({'term':'overconfident_claim'})\n        return {'ok': len(flags)==0, 'flags': flags}\n

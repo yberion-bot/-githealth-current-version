@@ -1,0 +1,1 @@
+class MCPClient:\n    def __init__(self, sender):\n        self.sender = sender\n    def make_request(self,target,method,params):\n        return {'mcp_id':'id','sender':self.sender,'target':target,'method':method,'params':params}\n

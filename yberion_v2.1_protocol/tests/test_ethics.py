@@ -1,0 +1,1 @@
+from src.agents.ethics_agent import EthicsAgent\n\ndef test_eth():\n    e=EthicsAgent()\n    r=e.evaluate('This will always work')\n    assert not r['ok']\n

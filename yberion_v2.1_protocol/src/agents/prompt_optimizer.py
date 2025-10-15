@@ -1,0 +1,1 @@
+class PromptOptimizer:\n    def __init__(self, token_budget=800):\n        self.token_budget = token_budget\n    def optimize(self, raw_input):\n        return {'prompt': raw_input[:1000], 'meta': {'tokens_est': min(1000, len(raw_input.split()))}}\n

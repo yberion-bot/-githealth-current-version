@@ -1,0 +1,2 @@
+base_path: "C:\\Users\\schat\\Desktop\\Yberion_Download"
+log_path: "C:\\Users\\schat\\Desktop\\Yberion_Download\\yberion_nexus.log"

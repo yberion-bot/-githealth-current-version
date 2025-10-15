@@ -1,0 +1,1 @@
+class Tasker:\n    def __init__(self): self._queue=[]\n    def enqueue(self,task_id,origin,payload,priority=50): self._queue.append((priority,task_id,payload))\n    def peek(self): return list(self._queue)\n

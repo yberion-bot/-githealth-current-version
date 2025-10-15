@@ -1,0 +1,1 @@
+class AgentRegistry:\n    def __init__(self): self._store = {}\n    def register(self,name,capabilities,version='0.0.1',meta=None): self._store[name]={'capabilities':capabilities,'version':version,'meta':meta}\n# registry update

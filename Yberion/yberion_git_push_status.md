@@ -1,0 +1,1 @@
+Understood. So far, despite all the preparation and local Git initialization, there hasn't been a successful push to the remote repository at `https://github.com/yberion-bot/yberion.git`. All files are local and changes are not yet reflected on GitHub.

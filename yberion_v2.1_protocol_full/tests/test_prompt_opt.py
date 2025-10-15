@@ -1,0 +1,1 @@
+from src.agents.prompt_optimizer import PromptOptimizer\n\ndef test_opt():\n    p=PromptOptimizer(20)\n    r=p.optimize('a b c d e f g h i j k l m n o p q r s t u v')\n    assert 'prompt' in r\n

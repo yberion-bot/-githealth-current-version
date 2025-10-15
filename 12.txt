@@ -1,0 +1,172 @@
+Perfekt. 🜂 Wir erstellen jetzt ein **internes Kommunikations- und Zustandsprotokoll** für Yberion Core ↔ Sub‑Agents ↔ Simulierter Junior‑Dev.
+Ziel: **klar definierte Schnittstellen, Statusübergänge, Feedback-Mechanismen**, alles innerhalb des Inner Mirror Flows.
+
+---
+
+# 1️⃣ Rollen & Verantwortlichkeiten
+
+| Rolle                                          | Funktion                                                                         | Zugriff & Scope                                                                     |
+| ---------------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Yberion Core**                               | Orchestrator, Validator, Lehrer                                                  | Vollzugriff auf alle Sub‑Agents, Metrics, Gap-Closer, Ensemble-Aggregator           |
+| **Junior‑Dev (simuliert, repräsentiert dich)** | Kunden- und Entwickler-Seite                                                     | Vorschläge, Code-Eingabe, Task-Definition, Feedback, kann alles testen und debuggen |
+| **Sub-Agents**                                 | Architect, Coder, Scribe, Seer, Balancer, Sentinel, SecurityAgent, CostOptimizer | Task-bezogene Verarbeitung, Payload + Confidence erzeugen                           |
+| **Inner Mirror Flow**                          | Kontrollierter Kommunikationskanal                                               | Status-Management, Task-Pipeline, Feedback-Routing, Traceability, Telemetry         |
+
+---
+
+# 2️⃣ Status-Übergänge (State Machine)
+
+```
+idle
+  └─ receive_task() ──> processing
+processing
+  ├─ run_task_sync() ──> waiting_feedback
+  └─ error ──> idle (mit Fehler-Log)
+waiting_feedback
+  ├─ provide_feedback() ──> idle
+  └─ timeout / gap detected ──> processing (adaptive)
+```
+
+* **idle:** wartet auf neuen Task
+* **processing:** Task wird durch alle relevanten Agents geleitet
+* **waiting_feedback:** intern oder externes Feedback ausstehend, Gap-Closer prüft automatisch
+* **adaptive loop:** SecurityAgent, CostOptimizer, Lyra Gap-Closer priorisieren Tasks erneut
+
+---
+
+# 3️⃣ Kommunikationsprotokoll (intern)
+
+### a) Task-Payload Format
+
+```json
+{
+  "trace_id": "uuid",
+  "customer_id": "cust-id",
+  "feature": "feature-name",
+  "requirements": {...},
+  "spec": {...},
+  "draft": "...",
+  "claims": [...],
+  "metrics": {
+      "latency_ms": 0,
+      "token_usage": 0,
+      "errors": 0
+  }
+}
+```
+
+* **Trace-ID** → unveränderlich, eindeutige Task-Verfolgung
+* **Metrics** → live aktualisiert durch TelemetryExporter / Metrics-Core
+* **Claims & draft** → für SecurityAgent und Scribe / Seer
+
+---
+
+### b) Agenten-Aufruf (Sync)
+
+```python
+for agent in agents:
+    response = agent.handle(task)
+    ensemble_payload.merge(response.payload)
+    record_provenance(agent.name, response)
+```
+
+* Jeder Agent erzeugt:
+
+  * `payload`: Task-bezogene Daten
+  * `confidence`: Qualitätsmaß
+  * `explanations`: Kurzer Bericht
+* **Merge** → Ensemble-Aggregator
+* **Provenance** → Audit-Trail
+
+---
+
+### c) Feedback-Mechanismus
+
+```python
+def provide_feedback(feedback):
+    if feedback["status"] == "needs_rework":
+        reassign_agents(feedback["issues"])
+        run_task_sync(feedback["task"])
+    else:
+        mark_task_complete(feedback["task"])
+```
+
+* Feedback kann intern (Junior-Dev simuliert) oder extern (Kunde) sein
+* SecurityAgent / CostOptimizer können adaptive Aktionen triggern
+* Lyra Gap-Closer schließt Lücken automatisch
+
+---
+
+### d) Telemetrie & Dashboards
+
+* **Metrics-Core:** sammelt latency, token_usage, errors
+* **Prometheus Export:** automatisch für Grafana
+* **Traceability:** jede Änderung wird protokolliert
+
+```
+task_trace = {
+  "trace_id": "...",
+  "received_at": "...",
+  "state": "...",
+  "metrics": {...},
+  "provenance": ["agent1","agent2",...]
+}
+```
+
+---
+
+# 4️⃣ Sicherheits- & Cost-Kontrolle
+
+* **MasterKey:** privilegierte Aktionen, z.B. Coder CI, direkte Deployment-Simulation
+* **CostOptimizer:** prüft Token-Usage, Budget, priorisiert Tasks
+* **SecurityAgent:** adaptive Gap-Closure bei Bias/Policy-Problemen
+* **Lyra:** orchestriert adaptive Agenten-Neupriorisierung
+
+---
+
+# 5️⃣ Deployment / End-to-End Flow
+
+```
+[Customer Input / Junior-Dev Task]
+        │
+        ▼
+[DataBridge Validation & Enrichment]
+        │
+        ▼
+[Agent Routing → Architect, Coder, Scribe, ...]
+        │
+        ▼
+[Ensemble-Aggregation / Provenance Logging]
+        │
+        ▼
+[Telemetry Update / Metrics Export]
+        │
+        ▼
+[Security & Cost Checks → Gap-Closer (Lyra)]
+        │
+        ▼
+[Waiting Feedback → Adaptive Loop if needed]
+        │
+        ▼
+[Task Complete / Deployment Outcome Ready]
+```
+
+* Vollständig innerhalb des **Inner Mirror Flows**
+* Traceable, auditierbar, adaptive
+* Deferred Agents können später ergänzt werden, ohne globalen Abbruch
+
+---
+
+# 6️⃣ Nächster Schritt (Simulation)
+
+Wir können jetzt **den End-to-End Flow simulieren**, bei dem:
+
+1. Junior‑Dev einen Task definiert
+2. Task durch DataBridge validiert wird
+3. Alle Agents ausgeführt werden
+4. Ensemble Payload generiert wird
+5. SecurityAgent + CostOptimizer + Lyra Gap-Closer adaptive Anpassungen durchführen
+6. Telemetrie & Dashboards aktualisiert werden
+7. Ergebnis intern als **Breakpoint für neue Chatfield Eingabe** bereitsteht
+
+⚡ Möchtest du, dass ich diesen **kompletten Deployment & Inner Mirror Flow jetzt live simuliere**?

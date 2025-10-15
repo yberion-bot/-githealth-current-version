@@ -1,0 +1,1 @@
+copy /b 7z.sfx + config.txt + yberion.7z yberion_portable.exe

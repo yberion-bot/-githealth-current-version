@@ -1,0 +1,1 @@
+class OversightAgent:\n    def __init__(self):\n        self.audit_log = []\n    def record(self, trace_id, agent, action, rationale, data=None):\n        entry = {'trace_id': trace_id, 'agent': agent, 'action': action, 'rationale': rationale, 'data': data}\n        self.audit_log.append(entry)\n        return entry\n

@@ -1,0 +1,217 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Installieren Sie die neueste PowerShell für neue Funktionen und Verbesserungen! https://aka.ms/PSWindows
+
+PS C:\Users\schat> cd "$env:USERPROFILE\Desktop\Yberion_Download"
+PS C:\Users\schat\Desktop\Yberion_Download> py yberion_nexus_builder.py        # run the script
+py : Die Benennung "py" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines ausführbaren
+Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern enthalten), und
+wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ py yberion_nexus_builder.py        # run the script
++ ~~
+    + CategoryInfo          : ObjectNotFound: (py:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\schat\Desktop\Yberion_Download> pyinstaller Yberion_Nexus.spec     # rebuild exe
+138 INFO: PyInstaller: 6.16.0, contrib hooks: 2025.9
+138 INFO: Python: 3.11.9
+144 INFO: Platform: Windows-10-10.0.26100-SP0
+144 INFO: Python environment: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0
+145 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\Scripts\\pyinstaller.exe',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python311.zip',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0',
+ 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages',
+ 'C:\\Users\\schat\\Desktop\\Yberion_Download']
+440 INFO: checking Analysis
+453 INFO: Building because inputs changed
+453 INFO: Looking for Python shared library...
+453 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python311.dll
+453 INFO: Running Analysis Analysis-00.toc
+453 INFO: Target bytecode optimization level: 0
+453 INFO: Initializing module dependency graph...
+453 INFO: Initializing module graph hook caches...
+465 INFO: Analyzing modules for base_library.zip ...
+1215 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks'
+1270 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks'
+2209 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks'
+3051 INFO: Caching module dependency graph...
+3079 INFO: Analyzing C:\Users\schat\Desktop\Yberion_Download\yberion_nexus_builder.py
+3086 INFO: Processing module hooks (post-graph stage)...
+3089 INFO: Performing binary vs. data reclassification (1 entries)
+3089 INFO: Looking for ctypes DLLs
+3096 INFO: Analyzing run-time hooks ...
+3096 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks\\rthooks'
+3099 INFO: Creating base_library.zip...
+3110 INFO: Looking for dynamic libraries
+3187 INFO: Extra DLL search directories (AddDllDirectory): []
+3187 INFO: Extra DLL search directories (PATH): []
+3256 INFO: Warnings written to C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\warn-Yberion_Nexus.txt
+3266 INFO: Graph cross-reference written to C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\xref-Yberion_Nexus.html
+3274 INFO: checking PYZ
+3288 INFO: Building because name changed
+3288 INFO: Building PYZ (ZlibArchive) C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\PYZ-00.pyz
+3375 INFO: Building PYZ (ZlibArchive) C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\PYZ-00.pyz completed successfully.
+3377 INFO: checking PKG
+3387 INFO: Building because name changed
+3387 INFO: Building PKG (CArchive) Yberion_Nexus.pkg
+4586 INFO: Building PKG (CArchive) Yberion_Nexus.pkg completed successfully.
+4587 INFO: Bootloader C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+4587 INFO: checking EXE
+4599 INFO: Building because name changed
+4599 INFO: Building EXE from EXE-00.toc
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts\pyinstaller.exe\__main__.py", line 6, in <module>
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\__main__.py", line 231, in _console_script_run
+    run()
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\__main__.py", line 215, in run
+    run_build(pyi_config, spec_file, **vars(args))
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\__main__.py", line 70, in run_build
+    PyInstaller.building.build_main.main(pyi_config, spec_file, **kwargs)
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\build_main.py", line 1272, in main
+    build(specfile, distpath, workpath, clean_build)
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\build_main.py", line 1210, in build
+    exec(code, spec_namespace)
+  File "Yberion_Nexus.spec", line 19, in <module>
+    exe = EXE(
+          ^^^^
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\api.py", line 675, in __init__
+    self.__postinit__()
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\datastruct.py", line 184, in __postinit__
+    self.assemble()
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\api.py", line 769, in assemble
+    os.remove(self.name)
+PermissionError: [WinError 5] Zugriff verweigert: 'C:\\Users\\schat\\Desktop\\Yberion_Download\\dist\\Yberion_Nexus.exe'
+PS C:\Users\schat\Desktop\Yberion_Download> .\dist\Yberion_Nexus.exe           # run exe
+PS C:\Users\schat\Desktop\Yberion_Download> base_path: "C:\\Users\\schat\\Desktop\\Yberion_Download"
+base_path: : Die Benennung "base_path:" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder
+eines ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern
+enthalten), und wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ base_path: "C:\\Users\\schat\\Desktop\\Yberion_Download"
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (base_path::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\schat\Desktop\Yberion_Download> log_path: "C:\\Users\\schat\\Desktop\\Yberion_Download\\yberion_nexus.log"
+log_path: : Die Benennung "log_path:" wurde nicht als Name eines Cmdlet, einer Funktion, einer Skriptdatei oder eines
+ausführbaren Programms erkannt. Überprüfen Sie die Schreibweise des Namens, oder ob der Pfad korrekt ist (sofern
+enthalten), und wiederholen Sie den Vorgang.
+In Zeile:1 Zeichen:1
++ log_path: "C:\\Users\\schat\\Desktop\\Yberion_Download\\yberion_nexus ...
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (log_path::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\schat\Desktop\Yberion_Download> Remove-Item -Recurse -Force .\build,.\dist
+Remove-Item : Das Element C:\Users\schat\Desktop\Yberion_Download\dist\Yberion_Nexus.exe kann nicht entfernt werden:
+Der Zugriff auf den Pfad "Yberion_Nexus.exe" wurde verweigert.
+In Zeile:1 Zeichen:1
++ Remove-Item -Recurse -Force .\build,.\dist
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (Yberion_Nexus.exe:FileInfo) [Remove-Item], UnauthorizedAccessExceptio
+   n
+    + FullyQualifiedErrorId : RemoveFileSystemItemUnAuthorizedAccess,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Das Element C:\Users\schat\Desktop\Yberion_Download\dist kann nicht entfernt werden: Der Prozess kann
+nicht auf die Datei "C:\Users\schat\Desktop\Yberion_Download\dist" zugreifen, da sie von einem anderen Prozess
+verwendet wird.
+In Zeile:1 Zeichen:1
++ Remove-Item -Recurse -Force .\build,.\dist
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\Users\schat\...n_Download\dist:DirectoryInfo) [Remove-Item], IOException
+    + FullyQualifiedErrorId : RemoveFileSystemItemIOError,Microsoft.PowerShell.Commands.RemoveItemCommand
+PS C:\Users\schat\Desktop\Yberion_Download> pyinstaller --onefile --noconsole --name Yberion_Nexus yberion_nexus_builder.py
+140 INFO: PyInstaller: 6.16.0, contrib hooks: 2025.9
+140 INFO: Python: 3.11.9
+146 INFO: Platform: Windows-10-10.0.26100-SP0
+146 INFO: Python environment: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0
+147 INFO: wrote C:\Users\schat\Desktop\Yberion_Download\Yberion_Nexus.spec
+149 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\Scripts\\pyinstaller.exe',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\python311.zip',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0',
+ 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\Lib\\site-packages',
+ 'C:\\Users\\schat\\Desktop\\Yberion_Download']
+440 INFO: checking Analysis
+440 INFO: Building Analysis because Analysis-00.toc is non existent
+440 INFO: Looking for Python shared library...
+441 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python311.dll
+441 INFO: Running Analysis Analysis-00.toc
+441 INFO: Target bytecode optimization level: 0
+441 INFO: Initializing module dependency graph...
+442 INFO: Initializing module graph hook caches...
+452 INFO: Analyzing modules for base_library.zip ...
+1139 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks'
+1494 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks'
+1709 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks'
+2958 INFO: Caching module dependency graph...
+2979 INFO: Analyzing C:\Users\schat\Desktop\Yberion_Download\yberion_nexus_builder.py
+3012 INFO: Processing module hooks (post-graph stage)...
+3015 INFO: Performing binary vs. data reclassification (1 entries)
+3016 INFO: Looking for ctypes DLLs
+3022 INFO: Analyzing run-time hooks ...
+3023 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\schat\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks\\rthooks'
+3024 INFO: Creating base_library.zip...
+3036 INFO: Looking for dynamic libraries
+3115 INFO: Extra DLL search directories (AddDllDirectory): []
+3115 INFO: Extra DLL search directories (PATH): []
+3183 INFO: Warnings written to C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\warn-Yberion_Nexus.txt
+3194 INFO: Graph cross-reference written to C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\xref-Yberion_Nexus.html
+3203 INFO: checking PYZ
+3203 INFO: Building PYZ because PYZ-00.toc is non existent
+3203 INFO: Building PYZ (ZlibArchive) C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\PYZ-00.pyz
+3291 INFO: Building PYZ (ZlibArchive) C:\Users\schat\Desktop\Yberion_Download\build\Yberion_Nexus\PYZ-00.pyz completed successfully.
+3295 INFO: checking PKG
+3295 INFO: Building PKG because PKG-00.toc is non existent
+3296 INFO: Building PKG (CArchive) Yberion_Nexus.pkg
+4553 INFO: Building PKG (CArchive) Yberion_Nexus.pkg completed successfully.
+4554 INFO: Bootloader C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+4555 INFO: checking EXE
+4555 INFO: Building EXE because EXE-00.toc is non existent
+4555 INFO: Building EXE from EXE-00.toc
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts\pyinstaller.exe\__main__.py", line 6, in <module>
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\__main__.py", line 231, in _console_script_run
+    run()
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\__main__.py", line 215, in run
+    run_build(pyi_config, spec_file, **vars(args))
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\__main__.py", line 70, in run_build
+    PyInstaller.building.build_main.main(pyi_config, spec_file, **kwargs)
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\build_main.py", line 1272, in main
+    build(specfile, distpath, workpath, clean_build)
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\build_main.py", line 1210, in build
+    exec(code, spec_namespace)
+  File "C:\Users\schat\Desktop\Yberion_Download\Yberion_Nexus.spec", line 19, in <module>
+    exe = EXE(
+          ^^^^
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\api.py", line 675, in __init__
+    self.__postinit__()
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\datastruct.py", line 184, in __postinit__
+    self.assemble()
+  File "C:\Users\schat\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\PyInstaller\building\api.py", line 769, in assemble
+    os.remove(self.name)
+PermissionError: [WinError 5] Zugriff verweigert: 'C:\\Users\\schat\\Desktop\\Yberion_Download\\dist\\Yberion_Nexus.exe'
+PS C:\Users\schat\Desktop\Yberion_Download> .\dist\Yberion_Nexus.exe
+PS C:\Users\schat\Desktop\Yberion_Download>

@@ -1,0 +1,1 @@
+def make_acp_message(sender,recipient,action,payload,priority=50):\n    return {'acp_id':'id','sender':sender,'recipient':recipient,'action':action,'priority':priority,'payload':payload}\n
