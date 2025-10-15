@@ -1,0 +1,1 @@
+{"timestamp": "2025-10-15T09:40:40.049096", "branches": [{"branch": "main", "local_changes": false, "behind": false, "ahead": false, "diverged": false, "conflict_predicted": true, "push_success": true, "pr_url": null, "notes": ["conflict_with_origin"]}]}
